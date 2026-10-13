@@ -1,0 +1,32 @@
+{
+  "name": "eventease-ticket-booking-system",
+  "version": "1.0.0",
+  "description": "EventEase - Professional Full-Stack Event Ticket Booking System with Concurrency Control & QR Verification",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test && npm --prefix client test",
+    "test:server": "npm --prefix server test",
+    "test:client": "npm --prefix client test",
+    "build": "npm --prefix client run build"
+  },
+  "keywords": [
+    "event-ticketing",
+    "full-stack",
+    "react",
+    "express",
+    "sqlite",
+    "redux-toolkit",
+    "concurrency-control",
+    "qr-code"
+  ],
+  "author": "Dharshan S",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
